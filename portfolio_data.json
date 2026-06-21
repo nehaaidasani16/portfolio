@@ -1,0 +1,300 @@
+{
+  "profile": {
+    "name": "Neha Aidasani",
+    "title": "Data Engineer | Data Analyst | Data Scientist | Analytics Engineer | Fresher",
+    "tagline": "Building reliable data pipelines that turn raw data into business value.",
+    "email": "nehhaaidasani@gmail.com",
+    "phone": "",
+    "location": "India",
+    "linkedin": "https://www.linkedin.com/in/neha-aidasani-91b784229/",
+    "github": "https://github.com/nehaaidasani16",
+    "resume_link": "https://drive.google.com/file/d/1aJ5VRGKCLrHIc_m8onLUZzsXh9IEny7m/view?usp=sharing",
+    "leetcode": "",
+    "kaggle": "",
+    "medium": "",
+    "about": "I am a passionate Data Engineer fresher with hands-on experience building ETL pipelines, working with cloud platforms, and transforming raw data into actionable insights.  Data Science graduate with hands-on experience in data analysis, monitoring, reporting, and dashboard development, supporting business and client decision-making. Strong ability to analyze large datasets, validate data quality, identify trends and anomalies, and translate complex analytical findings into clear, actionable insights. Applying structured analytical methodologies using SQL, Excel, Power BI, and Python. Adaptable, detail-oriented, and eager to grow in credit risk and portfolio analytics environments.'''"
+  },
+  "skills": {
+    "Languages": [
+      "Python",
+      "SQL"
+    ],
+    "Big Data & ETL": [
+      "ETL Pipelines",
+      "Apache Airflow",
+      "Window Functions",
+      "CTEs",
+      "SCD (Slowly Changing Dimensions)"
+    ],
+    "Cloud Platforms": [
+      "AWS",
+      "Azure"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "MySQL",
+      "Oracle SQL"
+    ],
+    "Tools & DevOps": [
+      "Git / GitHub"
+    ],
+    "Visualization": [
+      "Power BI",
+      "Tableau"
+    ],
+    "Professional Skills": [
+      "Logical & Problem Solving",
+      "Stakeholder Communication & Presentation",
+      "Attention to Detail",
+      "Fast Learner"
+    ]
+  },
+  "experience": [
+    {
+      "id": 4,
+      "role": "AI Intern",
+      "company": "Coincent",
+      "duration": "Oct 2023 - Dec 2023",
+      "location": "Remote",
+      "points": [
+        "Learning and working on AI Tools using Python"
+      ]
+    },
+    {
+      "id": 5,
+      "role": "Data Analytics Intern",
+      "company": "AICTE EY- GDS",
+      "duration": "Feb 2024 \u2013 April 2024",
+      "location": "Remote",
+      "points": [
+        "Analyzed structured business datasets to understand performance trends, KPIs, and comparative indicators across 50+ unicorn companies.",
+        "Built Power BI dashboards for ongoing monitoring, trend analysis, and management reporting.",
+        "Supported cross-functional collaboration and followed analytics best practices for reporting and delivery."
+      ]
+    },
+    {
+      "id": 6,
+      "role": "Data Science Intern",
+      "company": "NullClass",
+      "duration": "Sep 2024 - Dec 2024",
+      "location": "Remote",
+      "points": [
+        "Performed detailed data analysis and monitoring on large datasets to evaluate engagement trends, impressions, and performance metrics.",
+        "Constructed analytical reports and visual outputs, enabling stakeholders to easily interpret trends and patterns.",
+        "Identified anomalies and key trends, contributing to 20% improvement in data comprehension through simplified visual storytelling."
+      ]
+    },
+    {
+      "id": 7,
+      "role": "AI - Powered Resume Ranking System",
+      "company": "College Final Year Project",
+      "duration": "Aug 2024 - April 2025",
+      "location": "Pune",
+      "points": [
+        "Developed an NLP-based analytical system to score and rank resumes against job descriptions.",
+        "Handled data ingestion from multiple formats, pre-processing, feature extraction, and validation."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor's of Engineering in Artificial Intelligence and Data Science ",
+      "institution": "Savitribai Phule Pune University ",
+      "year": "2021 - 2025",
+      "score": "CGPA: 7.9 / 10",
+      "highlights": [
+        "DBMS",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science",
+        "Data Structures",
+        "Cloud Computing",
+        "Big Data Analytics",
+        "Operating System",
+        "Information Technology"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "AZ - 900 Azure Fundamentals",
+      "issuer": "Microsoft Azure",
+      "year": "2025",
+      "link": "https://drive.google.com/file/d/1tm4fhcr0BmoVitxfIR9RB19J0bL0b6Ff/view?usp=drive_link"
+    },
+    {
+      "id": 2,
+      "name": "24 hours  Hackathon ",
+      "issuer": "Brainovision Solutions",
+      "year": "2023",
+      "link": "https://drive.google.com/file/d/1apldHuzNhBeiaPTav6HWU1tuzkBPJ9Iy/view?usp=sharing"
+    },
+    {
+      "id": 3,
+      "name": "Visionary Techfest Hackathon",
+      "issuer": "Vishwakarma University",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/10LL5xX6rVbpDzEm6jgt2VxjwTXFeQzRg/view?usp=sharing"
+    },
+    {
+      "id": 4,
+      "name": "SAWIT.AI Learnathon ",
+      "issuer": "GUVI",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1vRR_EQatHqERvWIQ85v9QqbS4FwZdQE_/view?usp=sharing"
+    },
+    {
+      "id": 5,
+      "name": "GEN AI Virtual Internship",
+      "issuer": "Skillible",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1gQtUtE_ubFNlX-r2r798EuU_lMjneEs5/view?usp=sharing"
+    },
+    {
+      "id": 6,
+      "name": "Data Analyst Training",
+      "issuer": "NullClass",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/12vd2ZAv2PoGXfto4Pmh_AlvQjdggfw0m/view?usp=sharing"
+    },
+    {
+      "id": 7,
+      "name": "InnovateYou 24-Hour National Level Hackathon ",
+      "issuer": "Innovation Foundation Pune, InnovateYou",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1zYvfZKBsrhTaTo7pXDg6Fyex72BU7EZt/view?usp=sharing"
+    },
+    {
+      "id": 8,
+      "name": "Subject Topper Information Retrival ",
+      "issuer": "AISSMS IOIT",
+      "year": "2025",
+      "link": "https://drive.google.com/file/d/1KvFz0RlHhLFK1WaGs3IG4itoV5suxKcp/view?usp=sharing"
+    },
+    {
+      "id": 9,
+      "name": "AI with Python ",
+      "issuer": "Coincent ",
+      "year": "2022",
+      "link": "https://drive.google.com/file/d/1H8clq6ULtgmPKgvoTrbKu4hNpZ891nAZ/view?usp=sharing"
+    },
+    {
+      "id": 10,
+      "name": "Data Analyst Training",
+      "issuer": "Edunet Foundation & AICTE",
+      "year": "2023",
+      "link": "https://drive.google.com/file/d/1Ah1pbYHrXWH_kTrXOmuhIrjAu6ee-37z/view?usp=sharing"
+    },
+    {
+      "id": 11,
+      "name": "Data Analytics Internship",
+      "issuer": "AICTE EY-GDS",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1pbF8kBXzXx_7sRYiBIeEkeyr1Gs717V8/view?usp=sharing"
+    },
+    {
+      "id": 12,
+      "name": "Data Science Internship",
+      "issuer": "NullClass",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1WoyVKLYmn0wPNetb8zBf1L5pNZ9SuZpg/view?usp=sharing"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Automated Banking System Log Parser Engine",
+      "description": "A defensive data parsing pipeline that ingests raw, unstructured application runtime logs, processes them via structural exception handling boundaries to skip malformed data, and filters high-priority system errors into a local relational database for rapid production troubleshooting.",
+      "tech": [
+        "Python",
+        "SQLite",
+        "File I/O",
+        "SQL"
+      ],
+      "github": "https://github.com/nehaaidasani16/Automated-Banking-System-Log-Parser-Engine.git",
+      "demo": "",
+      "status": "Completed",
+      "progress": 100,
+      "tasks": [
+        {
+          "task": "Log File",
+          "done": true
+        },
+        {
+          "task": "Python Code",
+          "done": true
+        },
+        {
+          "task": "Cleaning",
+          "done": true
+        },
+        {
+          "task": "Filtering",
+          "done": true
+        },
+        {
+          "task": "Database Stores",
+          "done": true
+        },
+        {
+          "task": "SQL verifies",
+          "done": true
+        }
+      ],
+      "highlight": true,
+      "category": "ETL, Platform Support, Automation",
+      "started": "2026-06-21",
+      "completed": "2026-06-22"
+    },
+    {
+      "id": 2,
+      "title": "Cloud S3 Data Quality Guard Gate",
+      "description": "A cloud-native data screening application that interfaces programmatically with Amazon S3 via the boto3 SDK to download incoming client trade ledgers, applies automated financial compliance rules to quarantine corrupted data rows, and ensures downstream data lake health.",
+      "tech": [
+        "Python",
+        "AWS S3",
+        "Boto3 SDK",
+        "CSV Processing",
+        "IAM"
+      ],
+      "github": "https://github.com/nehaaidasani16",
+      "demo": "",
+      "status": "In Progress",
+      "progress": 70,
+      "tasks": [],
+      "highlight": true,
+      "category": "Cloud, Data Integrity, Automation",
+      "started": "2026-06-21",
+      "completed": ""
+    },
+    {
+      "id": 3,
+      "title": "Ad-Hoc Core Trading Analytics Engine",
+      "description": "An analytical relational database system loaded with mock financial ledger assets, utilized to solve business performance requests through advanced query optimization patterns including analytical window functions and modular CTE blocks.",
+      "tech": [
+        "PostgreSQL",
+        "DBeaver",
+        "SQL",
+        "Advanced Analytic Queries"
+      ],
+      "github": "https://github.com/nehaaidasani16",
+      "demo": "",
+      "status": "In Progress",
+      "progress": 50,
+      "tasks": [],
+      "highlight": true,
+      "category": "Data Analytics, Advanced SQL, Financial Ledger",
+      "started": "2026-06-21",
+      "completed": ""
+    }
+  ],
+  "achievements": [
+    "Top 10 \u2013 Visionary Techfest AI/ML Hackathon",
+    "Top 10 \u2013 Praklap Project Competition",
+    "Subject Topper \u2013 Information Retrieval",
+    "Microsoft AZ-900 Certified:  Azure Fundamentals",
+    "Participant \u2013 InnovateYou 24-Hour Hackathon"
+  ]
+}
