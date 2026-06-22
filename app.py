@@ -154,9 +154,9 @@ html,body,[class*="css"]{font-family:'Inter',sans-serif;}
 .tl::before{content:'';position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;background:#58a6ff;border:2px solid #0d1117;}
 
 /* stat box */
-.sb{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 14px;text-align:center;}
-.sn{font-size:1.3rem;font-weight:800;color:#58a6ff;font-family:'JetBrains Mono',monospace;}
-.sl{font-size:0.72rem;color:#8b949e;margin-top:3px;}
+.sb{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px;text-align:center;}
+.sn{font-size:1.9rem;font-weight:800;color:#58a6ff;font-family:'JetBrains Mono',monospace;}
+.sl{font-size:0.8rem;color:#8b949e;margin-top:4px;}
 
 /* resume banner */
 .rb{background:linear-gradient(135deg,#1f2937,#111827);border:1px solid #374151;border-left:4px solid #58a6ff;border-radius:10px;padding:18px 22px;margin-bottom:18px;}
@@ -307,20 +307,27 @@ if page == "home":
         st.markdown('<div class="sh" style="font-size:1.4rem; font-weight:700; color:#2563eb; margin-bottom:16px;">🌟 Featured Projects</div>', unsafe_allow_html=True)
         cols = st.columns(min(len(featured), 2))
         for i, pr in enumerate(featured[:4]):
-            pct = pr["progress"]
             tech_html = "".join([f'<span class="sp">{t}</span>' for t in pr["tech"][:5]])
             gh_btn = f'<a href="{pr["github"]}" target="_blank" class="lb">🐙 GitHub</a>' if pr.get("github") else ""
             dm_btn = f'<a href="{pr["demo"]}" target="_blank" class="lb">🌐 Demo</a>' if pr.get("demo") else ""
+            links_html = f'<div style="border-top:1px solid #30363d;padding-top:12px;margin-top:8px;display:flex;gap:8px;">{gh_btn}{dm_btn}</div>' if (pr.get("github") or pr.get("demo")) else ""
             with cols[i % len(cols)]:
                 st.markdown(f"""
-                <div style="background:#161b22;border:1px solid #21262d;border-left:3px solid #58a6ff;
-                            border-radius:12px;padding:20px;margin-bottom:14px;
-                            box-shadow:0 0 18px rgba(88,166,255,0.12);
-                            transition:box-shadow 0.2s;">
-                    <div style="font-weight:700;color:#e6edf3;font-size:1rem;margin-bottom:8px;letter-spacing:-0.2px;">{pr['title']}</div>
-                    <div style="font-size:0.84rem;color:#8b949e;margin-bottom:12px;line-height:1.65;">{pr['description']}</div>
-                    <div style="margin-bottom:14px;">{tech_html}</div>
-                    <div style="border-top:1px solid #21262d;padding-top:10px;margin-top:4px;">{gh_btn}{dm_btn}</div>
+                <div style="background:linear-gradient(160deg,#161b22 0%,#1c2333 100%);
+                            border:1px solid #30363d;border-top:3px solid #58a6ff;
+                            border-radius:14px;padding:22px 20px 16px;margin-bottom:16px;
+                            box-shadow:0 0 40px rgba(88,166,255,0.18),0 4px 20px rgba(0,0,0,0.5);
+                            position:relative;overflow:hidden;">
+                    <div style="position:absolute;top:0;right:0;width:110px;height:110px;
+                                background:radial-gradient(circle at top right,rgba(88,166,255,0.13),transparent 65%);
+                                pointer-events:none;"></div>
+                    <div style="position:absolute;top:12px;left:-1px;width:3px;height:44px;
+                                background:linear-gradient(180deg,#58a6ff,transparent);border-radius:0 2px 2px 0;"></div>
+                    <div style="font-weight:800;color:#e6edf3;font-size:1.05rem;letter-spacing:-0.3px;
+                                line-height:1.35;margin-bottom:12px;">{pr['title']}</div>
+                    <div style="font-size:0.85rem;color:#8b949e;margin-bottom:14px;line-height:1.8;">{pr['description']}</div>
+                    <div style="margin-bottom:16px;display:flex;flex-wrap:wrap;gap:5px;">{tech_html}</div>
+                    {links_html}
                 </div>""", unsafe_allow_html=True)
 
     st.markdown('<div class="sh" style="font-size:1.4rem; font-weight:700; color:#2563eb; margin-bottom:16px;">🛠 Skills</div>', unsafe_allow_html=True)
@@ -331,21 +338,37 @@ if page == "home":
             st.markdown(f'<div class="card"><div style="font-weight:600;color:#58a6ff;font-size:0.85rem;margin-bottom:8px;">{cat}</div>{pills}</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="sh" style="font-size:1.4rem; font-weight:700; color:#2563eb; margin-bottom:16px;">🏅 Certifications</div>', unsafe_allow_html=True)
-    cert_cols = st.columns(4)
+    home_cert_cols = st.columns(4)
     for i, cert in enumerate(data["certifications"]):
-        link_html = f'<a href="{cert["link"]}" target="_blank" style="color:#58a6ff;font-size:0.72rem;font-weight:600;text-decoration:none;"> ↗</a>' if cert.get("link") else ""
-        with cert_cols[i % 4]:
-            st.markdown(f'''
-            <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
-                        padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
-                <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
-                <div style="overflow:hidden;">
-                    <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
-                                white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["name"]}{link_html}</div>
-                    <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["issuer"]}</div>
-                    <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert["year"]}</div>
-                </div>
-            </div>''', unsafe_allow_html=True)
+        link_url = cert.get("link", "")
+        arrow = ' <span style="color:#58a6ff;font-size:0.66rem;">↗</span>' if link_url else ""
+        with home_cert_cols[i % 4]:
+            if link_url:
+                st.markdown(f"""<a href="{link_url}" target="_blank" style="text-decoration:none;display:block;">
+                <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
+                            padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;cursor:pointer;"
+                     onmouseover="this.style.borderColor='#58a6ff';this.style.boxShadow='0 0 12px rgba(88,166,255,0.25)';this.style.background='#1c2333'"
+                     onmouseout="this.style.borderColor='#21262d';this.style.boxShadow='none';this.style.background='#161b22'">
+                    <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
+                    <div style="overflow:hidden;">
+                        <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
+                                    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["name"]}{arrow}</div>
+                        <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["issuer"]}</div>
+                        <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert["year"]}</div>
+                    </div>
+                </div></a>""", unsafe_allow_html=True)
+            else:
+                st.markdown(f"""
+                <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
+                            padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+                    <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
+                    <div style="overflow:hidden;">
+                        <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
+                                    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["name"]}</div>
+                        <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert["issuer"]}</div>
+                        <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert["year"]}</div>
+                    </div>
+                </div>""", unsafe_allow_html=True)
 
 # ════════════════════════════════════════════════════════════
 # ABOUT
@@ -461,23 +484,35 @@ elif page == "projects":
         st.markdown("")
 
     for pr in projs:
-        pct = pr["progress"]
-        tech_html = "".join([f'<span class="sp" style="background-color:#21262d; color:#58a6ff; border:1px solid #30363d; padding:4px 8px; border-radius:6px; margin-right:6px; font-size:0.85rem;">{t}</span>' for t in pr["tech"]])
+        is_hl = pr.get("highlight", False)
+        tech_html = "".join([f'<span class="sp">{t}</span>' for t in pr["tech"]])
         gh_btn = f'<a href="{pr["github"]}" target="_blank" class="lb">🐙 GitHub</a>' if pr.get("github") else ""
         dm_btn = f'<a href="{pr["demo"]}" target="_blank" class="lb">🌐 Demo</a>' if pr.get("demo") else ""
+        links_row = f'<div style="border-top:1px solid #30363d;padding-top:12px;margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;">{gh_btn}{dm_btn}</div>' if (pr.get("github") or pr.get("demo")) else ""
+        hl_badge = '<span style="background:rgba(88,166,255,0.15);color:#58a6ff;border:1px solid rgba(88,166,255,0.4);border-radius:20px;padding:2px 10px;font-size:0.7rem;font-weight:700;">⭐ Featured</span>' if is_hl else ""
+        glow = "box-shadow:0 0 40px rgba(88,166,255,0.18),0 4px 20px rgba(0,0,0,0.5);" if is_hl else "box-shadow:0 2px 10px rgba(0,0,0,0.3);"
+        bg   = "background:linear-gradient(160deg,#161b22 0%,#1c2333 100%);" if is_hl else "background:#161b22;"
+        hl_strip = '<div style="position:absolute;top:12px;left:-1px;width:3px;height:44px;background:linear-gradient(180deg,#58a6ff,transparent);border-radius:0 2px 2px 0;"></div>' if is_hl else ""
 
-        # Setup the label text cleanly
-        label = f"{'⭐ ' if pr.get('highlight') else ''}{pr['title']}  —  {pr['status']}  ({pct}%)"
-        with st.expander(label, expanded=pr.get("highlight", False)):
-            # Description + tech + progress: Clean, bright, readable text inside the dark container card
+        label = f"{'⭐ ' if is_hl else ''}{pr['title']}"
+        with st.expander(label, expanded=is_hl):
             st.markdown(f"""
-            <div style="color:#e6edf3; font-size:0.95rem; margin-bottom:12px; line-height:1.6;">{pr['description']}</div>
-            <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; gap:4px;">{tech_html}</div>""", unsafe_allow_html=True)
-            
-            st.markdown(pbar(pct), unsafe_allow_html=True)
-            st.markdown(f'<div style="font-size:0.8rem; color:#8b949e; margin:4px 0 12px;">{pct}% complete</div>', unsafe_allow_html=True)
-            if gh_btn or dm_btn:
-                st.markdown(gh_btn + dm_btn, unsafe_allow_html=True)
+            <div style="{bg}border:1px solid #30363d;border-top:3px solid #58a6ff;{glow}
+                        border-radius:14px;padding:22px 20px 16px;position:relative;overflow:hidden;margin-bottom:6px;">
+                <div style="position:absolute;top:0;right:0;width:110px;height:110px;
+                            background:radial-gradient(circle at top right,rgba(88,166,255,0.1),transparent 65%);
+                            pointer-events:none;"></div>
+                {hl_strip}
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;
+                            margin-bottom:12px;gap:10px;flex-wrap:wrap;">
+                    <div style="font-weight:800;color:#e6edf3;font-size:1.05rem;
+                                letter-spacing:-0.3px;line-height:1.35;flex:1;">{pr['title']}</div>
+                    {hl_badge}
+                </div>
+                <div style="font-size:0.88rem;color:#8b949e;margin-bottom:16px;line-height:1.8;">{pr['description']}</div>
+                <div style="margin-bottom:16px;display:flex;flex-wrap:wrap;gap:5px;">{tech_html}</div>
+                {links_row}
+            </div>""", unsafe_allow_html=True)
 
             # Task checklist — owner only
             if not VISITOR:
@@ -514,8 +549,7 @@ elif page == "projects":
                     new_status = st.selectbox("Status", ["Completed", "In Progress", "Planning", "On Hold"],
                         index=["Completed", "In Progress", "Planning", "On Hold"].index(pr["status"]), key=f"ps_{pr['id']}")
                 with e2:
-                    new_slider_val = int(pct) if str(pct).isdigit() else 0
-                    new_prog = st.slider("Progress %", 0, 100, new_slider_val, key=f"pp_{pr['id']}")
+                    new_prog = st.slider("Progress %", 0, 100, int(pr["progress"]), key=f"pp_{pr['id']}")
                 with e3:
                     new_hl = st.checkbox("⭐ Feature on Home", value=pr.get("highlight", False), key=f"ph_{pr['id']}")
 
@@ -615,18 +649,34 @@ elif page == "skills":
     cert_cols = st.columns(4)
     for i, cert in enumerate(data["certifications"]):
         with cert_cols[i % 4]:
-            link_html = f'<a href="{cert["link"]}" target="_blank" style="color:#58a6ff;font-size:0.72rem;font-weight:600;text-decoration:none;"> ↗</a>' if cert.get("link") else ""
-            st.markdown(f"""
-            <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
-                        padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
-                <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
-                <div style="overflow:hidden;">
-                    <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
-                                white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['name']}{link_html}</div>
-                    <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['issuer']}</div>
-                    <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert['year']}</div>
-                </div>
-            </div>""", unsafe_allow_html=True)
+            link_url = cert.get("link", "")
+            arrow = ' <span style="color:#58a6ff;font-size:0.66rem;">↗</span>' if link_url else ""
+            if link_url:
+                st.markdown(f"""<a href="{link_url}" target="_blank" style="text-decoration:none;display:block;">
+                <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
+                            padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;cursor:pointer;"
+                     onmouseover="this.style.borderColor='#58a6ff';this.style.boxShadow='0 0 12px rgba(88,166,255,0.25)';this.style.background='#1c2333'"
+                     onmouseout="this.style.borderColor='#21262d';this.style.boxShadow='none';this.style.background='#161b22'">
+                    <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
+                    <div style="overflow:hidden;">
+                        <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
+                                    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['name']}{arrow}</div>
+                        <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['issuer']}</div>
+                        <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert['year']}</div>
+                    </div>
+                </div></a>""", unsafe_allow_html=True)
+            else:
+                st.markdown(f"""
+                <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;
+                            padding:10px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+                    <div style="font-size:1.1rem;flex-shrink:0;">🏅</div>
+                    <div style="overflow:hidden;">
+                        <div style="font-weight:600;color:#e6edf3;font-size:0.78rem;line-height:1.3;
+                                    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['name']}</div>
+                        <div style="color:#58a6ff;font-size:0.7rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{cert['issuer']}</div>
+                        <div style="color:#8b949e;font-size:0.68rem;margin-top:1px;">{cert['year']}</div>
+                    </div>
+                </div>""", unsafe_allow_html=True)
 
             if not VISITOR:
                 with st.expander("✏️ Edit"):
