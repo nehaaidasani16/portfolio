@@ -20,7 +20,8 @@
       "SQL"
     ],
     "Big Data & ETL": [
-      "ETL Pipelines",
+      "ETL Processing",
+      "ELT Processing",
       "Apache Airflow",
       "Window Functions",
       "CTEs",
@@ -211,7 +212,8 @@
         "Python",
         "SQLite",
         "File I/O",
-        "SQL"
+        "SQL",
+        "ETL Processing"
       ],
       "github": "https://github.com/nehaaidasani16/Automated-Banking-System-Log-Parser-Engine.git",
       "demo": "",
@@ -246,7 +248,7 @@
       "highlight": true,
       "category": "ETL, Platform Support, Automation",
       "started": "2026-06-21",
-      "completed": "2026-06-22"
+      "completed": "2026-06-23"
     },
     {
       "id": 2,
@@ -271,15 +273,16 @@
     },
     {
       "id": 3,
-      "title": "Ad-Hoc Core Trading Analytics Engine",
+      "title": "Core Trading Analytics Engine",
       "description": "An analytical relational database system loaded with mock financial ledger assets, utilized to solve business performance requests through advanced query optimization patterns including analytical window functions and modular CTE blocks.",
       "tech": [
         "PostgreSQL",
-        "DBeaver",
         "SQL",
-        "Advanced Analytic Queries"
+        "Window Functions",
+        "CTEs",
+        "Analytics"
       ],
-      "github": "https://github.com/nehaaidasani16/AD-HOC-Core-Trading-Analytics-Engine",
+      "github": "https://github.com/nehaaidasani16/Core-Trading-Analytics-Engine",
       "demo": "",
       "status": "In Progress",
       "progress": 50,
