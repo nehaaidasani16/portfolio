@@ -232,7 +232,7 @@ with st.sidebar:
 
     pages_public = {
         "🏠 Home": "home", "👤 About": "about", "💼 Experience": "experience",
-        "🚀 Projects": "projects", "🛠 Skills": "skills", "Certfications" : "certification",
+        "🚀 Projects": "projects", "🛠 Skills and Certificates": "skills",
         "🎓 Education": "education", "🏆 Achievements": "achievements", "📄 Resume": "resume",
     }
     pages_owner = {"🔗 Share": "links", "⚙️ Edit Profile": "edit"}
