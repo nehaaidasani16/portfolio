@@ -252,7 +252,7 @@
     },
     {
       "id": 2,
-      "title": "Cloud S3 Data Quality Guard Gate",
+      "title": "Cloud Data Quality Guard Gate",
       "description": "A cloud-native data screening application that interfaces programmatically with Amazon S3 via the boto3 SDK to download incoming client trade ledgers, applies automated financial compliance rules to quarantine corrupted data rows, and ensures downstream data lake health.",
       "tech": [
         "Python",
@@ -261,7 +261,7 @@
         "CSV Processing",
         "IAM"
       ],
-      "github": "https://github.com/nehaaidasani16/Cloud-S3-Data-Quality-Guard-Gate",
+      "github": "https://github.com/nehaaidasani16/Cloud-Data-Quality-Guard-Gate",
       "demo": "",
       "status": "In Progress",
       "progress": 70,
