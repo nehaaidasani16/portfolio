@@ -216,7 +216,7 @@
         "ETL Processing"
       ],
       "github": "https://github.com/nehaaidasani16/Automated-Banking-System-Log-Parser-Engine.git",
-      "demo": "",
+      "demo": "https://nehaaidasani16.github.io/Automated-Banking-System-Log-Parser-Engine/",
       "status": "Completed",
       "progress": 100,
       "tasks": [
@@ -248,7 +248,7 @@
       "highlight": true,
       "category": "ETL, Platform Support, Automation",
       "started": "2026-06-21",
-      "completed": "2026-06-23"
+      "completed": "2026-06-26"
     },
     {
       "id": 2,
